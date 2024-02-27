@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Ew5355a9v3BUpG5D2h2lgmksHPpR0nWj8lFhp5B7/c3z1E2Un/5frfyaVjX1CrrU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Form Input Page</title>
+    <style>
+        body {
+        background: #FFFADD;
+        font-family: 'Titillium Web', sans-serif;
+      }
+        .image-container {
+            background: url('https://media.istockphoto.com/id/1215119911/id/foto/melihat-langsung-ke-cakrawala-distrik-keuangan-di-pusat-kota-london-gambar-saham.jpg?s=612x612&w=0&k=20&c=1afLw3gUfL2Vavlh3JWtpyvEIdF_LVBgAFHZdpTYm_w=') center/cover no-repeat;
+            size: 100vh;
+            width: 100vw;
+        }
+        .tab-group {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 40px 0;
+      }
+
+      .tab-group li a {
+        display: block;
+        text-decoration: none;
+        border-radius: 25px;
+        padding: 10px;
+        background: rgba(160, 179, 176, 0.25);
+        color: black;
+        font-size: 20px;
+        float: left;
+        width: 45%;
+        text-align: center;
+        cursor: pointer;
+        transition: .5s ease;
+        margin: 10px;
+      }
+      .tab-group li a:hover {
+        background: #FFCC70;
+        color: #ffffff;
+      }
+      .tab-group .active a {
+        background: #FFCC70;
+        color: #ffffff;
+      }
+
+      .tab-content > div:last-child {
+        display: none;
+      }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Form Section -->
+            <div class="col">
+                <ul class="tab-group col-xl-15 pt-5" id="selector">
+                    <li class="tab active"><a href="#1">Orang Tua</a></li>
+                    <li class="tab"><a href="#2">Anak Anak</a></li>
+                  </ul>
+                  
+                    <div class="tab-content">
+                      <div id="1">   
+                        <div class="col-xl-15">
+                          <div class="card-body p-md-5 text-black">
+                            <h3 class="m-5 text-uppercase" style="text-align: center;">Form Registrasi Orang Tua</h3>
+              
+                            <!-- parent form -->
+                            <form method="post">
+                                <div class="form-outline mb-4">
+                                    <label class="form-label">Nama</label>
+                                    <input type="text" id="name" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                    
+                                    <h6 class="mb-0 me-4">Jenis Kelamin : </h6>
+                    
+                                    <div class="form-check form-check-inline mb-0 me-4">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                                        value="female" />
+                                      <label class="form-check-label" for="femaleGender">Perempuan</label>
+                                    </div>
+                    
+                                    <div class="form-check form-check-inline mb-0 me-4">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                                        value="male" />
+                                      <label class="form-check-label" for="maleGender">Laki-laki</label>
+                                    </div>
+                    
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Pekerjaan</label>
+                                    <input type="text" id="job" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Alamat</label>
+                                    <input type="text" id="address" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Nomor HP</label>
+                                    <input type="text" id="phone" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Pendidikan Terakhir</label>
+                                    <input type="text" id="pendidikan" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Tanggal Lahir</label>
+                                    <input type="date" id="birth" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                      <div class="form-outline">
+                                        <label class="form-label">Anak ke:</label>
+                                        <input type="text" id="anak" class="form-control form-control-lg"/>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                      <div class="form-outline">
+                                        <label class="form-label">Dari berapa bersaudara:</label>
+                                        <input type="text" id="saudara" class="form-control form-control-lg"/>
+                                      </div>
+                                    </div>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Kewarganegaraan</label>
+                                    <input type="text" id="nationality" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Agama</label>
+                                    <input type="text" id="religion" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="row">
+                                    <div class="d-flex justify-content-start col-md-6 mb-4">
+                                      <p class="me-4">Status Pernikahan: </p>
+                                      <select class="form-select-lg" id="status_nikah" style="height: 5vh; font-size: 15px; border: none;">
+                                        <option value="belum_menikah">Belum Menikah</option>
+                                        <option value="sudah_menikah">Sudah Menikah</option>
+                                      </select>
+                    
+                                    </div>
+                    
+                                    <div class="col-md-6 mb-4" id="tahun_nikah" style="visibility: hidden;">
+                                      <div class="form-outline">
+                                        <label class="form-label">Berapa tahun:</label>
+                                        <input type="text"  id="tahun_nikah" class="form-control form-control-lg"/>
+                                      </div>
+                                    </div>
+                                  </div>
+                    
+                                  <div class="d-flex justify-content-end pt-3">
+                                    <button type="button" class="btn btn-warning btn-lg ms-2">Submit</button>
+                                  </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div id="2">   
+                        <div class="col-xl-15">
+                          <div class="card-body p-md-5 text-black">
+                            <h3 class="m-5 text-uppercase" style="text-align: center;">Form Registrasi Anak-Anak</h3>
+              
+                            <!-- child form -->
+                            <form method="post">
+                                <div class="form-outline mb-4">
+                                    <label class="form-label">Nama</label>
+                                    <input type="text" id="name" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                    
+                                    <h6 class="mb-0 me-4">Jenis Kelamin: </h6>
+                    
+                                    <div class="form-check form-check-inline mb-0 me-4">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                                        value="female" />
+                                      <label class="form-check-label" for="femaleGender">Perempuan</label>
+                                    </div>
+                    
+                                    <div class="form-check form-check-inline mb-0 me-4">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                                        value="male" />
+                                      <label class="form-check-label" for="maleGender">Laki-laki</label>
+                                    </div>
+                    
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Alamat</label>
+                                    <input type="text" id="address" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Nomor HP</label>
+                                    <input type="text" id="phone" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Tanggal Lahir</label>
+                                    <input type="date" id="tempat_tanggal_lahir" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="row">
+                                    <div class="col-md-15 mb-4">
+                                      <div class="form-outline">
+                                        <label class="form-label">Anak ke:</label>
+                                        <input type="text" id="anak" class="form-control form-control-lg"/>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                      <div class="form-outline">
+                                        <label class="form-label">Dari berapa bersaudara:</label>
+                                        <input type="text" id="saudara" class="form-control form-control-lg"/>
+                                      </div>
+                                    </div>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Kewarganegaraan</label>
+                                    <input type="text" id="nationality" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Agama</label>
+                                    <input type="text" id="religion" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Kelas</label>
+                                    <input type="text" id="school_class" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Nama Sekolah</label>
+                                    <input type="text" id="school_name" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <!-- Father Identity -->
+                                  <h3 class="m-5 text-uppercase" style="text-align: center;">Identitas Ayah</h3>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Nama</label>
+                                    <input type="text" id="name" class="form-control form-control-lg"/>
+                                  </div>
+
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Umur</label>
+                                    <input type="text" id="age" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                                    <h6 class="mb-0 me-4">Jenis Kelamin: </h6>
+
+                                    <div class="form-check form-check-inline mb-0 me-4">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                                        value="female" />
+                                      <label class="form-check-label" for="femaleGender">Perempuan</label>
+                                    </div>
+                    
+                                    <div class="form-check form-check-inline mb-0 me-4">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                                        value="male" />
+                                      <label class="form-check-label" for="maleGender">Laki-laki</label>
+                                    </div>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Urutan Kelahiran</label>
+                                    <input type="text" id="urutan_kelahiran" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Agama</label>
+                                    <input type="text" id="religion" class="form-control form-control-lg"/>
+                                  </div>
+
+                                  <div class="d-flex justify-content-start col-md-6 mb-4">
+                                    <p class="me-4">Status Pernikahan: </p>
+                                    <select class="form-select-lg" id="status_nikah" style="height: 5vh; font-size: 15px; border: none;">
+                                      <option value="belum_menikah">Belum Menikah</option>
+                                      <option value="sudah_menikah">Sudah Menikah</option>
+                                    </select>
+                  
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Pekerjaan</label>
+                                    <input type="text" id="job" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Pendidikan Terakhir</label>
+                                    <input type="text" id="pendidikan" class="form-control form-control-lg"/>
+                                  </div>
+
+                                  <!-- Mother Identity -->
+                                  <h3 class="m-5 text-uppercase" style="text-align: center;">Identitas Ibu</h3>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Nama</label>
+                                    <input type="text" id="name" class="form-control form-control-lg"/>
+                                  </div>
+
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Umur</label>
+                                    <input type="text" id="age" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+                                    <h6 class="mb-0 me-4">Jenis Kelamin: </h6>
+
+                                    <div class="form-check form-check-inline mb-0 me-4">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                                        value="female" />
+                                      <label class="form-check-label" for="femaleGender">Perempuan</label>
+                                    </div>
+                    
+                                    <div class="form-check form-check-inline mb-0 me-4">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                                        value="male" />
+                                      <label class="form-check-label" for="maleGender">Laki-laki</label>
+                                    </div>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Urutan Kelahiran</label>
+                                    <input type="text" id="urutan_kelahiran" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Agama</label>
+                                    <input type="text" id="religion" class="form-control form-control-lg"/>
+                                  </div>
+
+                                  <div class="d-flex justify-content-start col-md-6 mb-4">
+                                    <p class="me-4">Status Pernikahan: </p>
+                                    <select class="form-select-lg" id="status_nikah" style="height: 5vh; font-size: 15px; border: none;">
+                                      <option value="belum_menikah">Belum Menikah</option>
+                                      <option value="sudah_menikah">Sudah Menikah</option>
+                                    </select>
+                  
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Pekerjaan</label>
+                                    <input type="text" id="job" class="form-control form-control-lg"/>
+                                  </div>
+                    
+                                  <div class="form-outline mb-4">
+                                    <label class="form-label">Pendidikan Terakhir</label>
+                                    <input type="text" id="pendidikan" class="form-control form-control-lg"/>
+                                  </div>
+                                  <div class="d-flex justify-content-end pt-3">
+                                    <button type="button" class="btn btn-warning btn-lg ms-2 w-25">Submit</button>
+                                  </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+
+            <!-- Image Section -->
+            <div class="col image-container"></div>
+        </div>
+    </div>
+    <script>
+        $('.form').find('input, textarea').on('keyup blur focus', function (e) {
+          var $this = $(this),
+              label = $this.prev('label');
+
+            if (e.type === 'keyup') {
+              if ($this.val() === '') {
+                  label.removeClass('active highlight');
+                } else {
+                  label.addClass('active highlight');
+                }
+            } else if (e.type === 'blur') {
+              if( $this.val() === '' ) {
+                label.removeClass('active highlight'); 
+              } else {
+                label.removeClass('highlight');   
+              }   
+            } else if (e.type === 'focus') {
+              
+              if( $this.val() === '' ) {
+                label.removeClass('highlight'); 
+              } 
+              else if( $this.val() !== '' ) {
+                label.addClass('highlight');
+              }
+            }
+        });
+
+        $('.tab a').on('click', function (e) {
+          
+          e.preventDefault();
+          
+          $(this).parent().addClass('active');
+          $(this).parent().siblings().removeClass('active');
+          
+          target = $(this).attr('href');
+
+          $('.tab-content > div').not(target).hide();
+          
+          $(target).fadeIn(600);
+          
+        });
+          let val = $('#status_nikah').val();
+          console.log(val);
+
+        // $('#status_nikah').on('change', function () {
+        //   let val = $('#status_nikah').val();
+        //   console.log(val);
+        //   alert(val.type)
+        //   // alert(val)
+        //   if (val == "sudah_menikah") {
+        //       $('#tahun_nikah').attr('disabled', true);
+        //   } else {
+        //       $('#tahun_nikah').hide;
+        //   }
+        // })
+        const el = document.getElementById('status_nikah');
+        const box = document.getElementById('tahun_nikah');
+        el.addEventListener('change', function handleChange(event) {
+          if (event.target.value === 'sudah_menikah') {
+              box.style.visibility = 'visible';
+          } else {
+              box.style.visibility = 'hidden';
+          }
+        });
+      </script>
+</body>
+</html>

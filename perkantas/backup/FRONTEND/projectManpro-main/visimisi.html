@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #FFFADD;
+        }
+        .navbar-brand:hover {
+            transform: scale(1.1);
+        }
+        .navbar {
+            background-color:#FFCC70;
+        }
+        .nav-link {
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #031D44;
+            padding: 20px 0px;
+            margin-right: 20px;
+            display: inline-block;
+            position: relative;
+            opacity: 0.75;
+        }
+
+        .nav-link:hover {
+            opacity: 1;
+        }
+
+        .nav-link::before {
+            transition: 300ms;
+            height: 2px;
+            content: "";
+            position: absolute;
+            background-color: red;
+        }
+
+        .nav-link-img {
+            color: #031D44;
+            padding-top: 15px;
+            margin-right: 20px;
+            display: inline-block;
+            position: relative;
+            opacity: 0.75;
+        }
+        .nav-link-img:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .nav-link-ltr::before {
+            width: 0%;
+            bottom: 10px;
+        }
+
+        .nav-link-ltr:hover::before {
+            width: 100%;
+        }
+        #dropdown-products {
+            display: none;
+        }
+
+        #menu-products:hover #dropdown-products {
+            display: block;
+        }
+        .carousel{
+            width: 60vw;
+        }
+
+        .dropdown-item.active {
+            font-weight: bold!important;
+        }
+
+        .visimisi {
+            width: 100%;
+            height: 180px;
+        }
+
+        .vm {
+            padding-bottom: 10px;
+        }
+
+        .motto {
+            padding-top: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="#"><img  src="assets/logo.png" style="height: 64px; height: 64px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-ltr" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown" id="menu-products">
+                        <a class="nav-link nav-link-ltr dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                          Services
+                        </a>
+                        <ul class="dropdown-menu" id="dropdown-products" style="background-color: rgba(255, 255, 255, 0.9);">
+                          <li><a class="dropdown-item" href="konseling.html">Konseling</a></li>
+                          <li><a class="dropdown-item" href="#">Psikotes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown" id="menu-products">
+                        <a class="nav-link active nav-link-ltr dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                          About Us
+                        </a>
+                        <ul class="dropdown-menu" id="dropdown-products" style="background-color: rgba(255, 255, 255, 0.9);">
+                          <li><a class="dropdown-item fw-bold" href="visimisi.html">Visi Misi</a></li>
+                          <li><a class="dropdown-item" href="#">Mengapa Pilih Kami</a></li>
+                          <li><a class="dropdown-item" href="#">Team Profile</a></li>
+                          <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-ltr" href="artikel.html">Article</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-ltr" href="#">Activity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link-img nav-link-ltr" href="#"><img  src="assets/user.png" style="height: 28px; height: 28px;"></a>
+                    </li>
+                </ul>		  
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="visimisi p-5 col-8 mx-auto d-flex align-items-center flex-column">
+        <h1 class="vm mt-3">VISI & MISI</h1>
+        <p style="text-align: justify;">Menolong Sumber Daya Manusia Indonesia untuk <b>memahami</b>, dan <b>mengembangkan</b> potensi serta
+            <b>mengatasi</b> hambatan-hambatan dirinya sehingga dapat mengembangkan potensinya dengan lebih <b>efektif</b>.
+        </p>
+    
+        <h1 class="motto mt-3">MOTTO</h1>
+        <p style="padding-top: 10px;"><b><i>“Mendampingi menggapai potensi efektif”</i></b></p>
+    </div>
+    
+</body>
+</html>

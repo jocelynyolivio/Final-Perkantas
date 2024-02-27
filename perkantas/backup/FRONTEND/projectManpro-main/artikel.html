@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #FFFADD;
+        }
+        .navbar-brand:hover {
+            transform: scale(1.1);
+        }
+        .navbar {
+            background-color:#FFCC70;
+        }
+        .nav-link {
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #031D44;
+            padding: 20px 0px;
+            margin-right: 20px;
+            display: inline-block;
+            position: relative;
+            opacity: 0.75;
+        }
+
+        .nav-link:hover {
+            opacity: 1;
+        }
+
+        .nav-link::before {
+            transition: 300ms;
+            height: 2px;
+            content: "";
+            position: absolute;
+            background-color: red;
+        }
+
+        .nav-link-img {
+            color: #031D44;
+            padding-top: 15px;
+            margin-right: 20px;
+            display: inline-block;
+            position: relative;
+            opacity: 0.75;
+        }
+        .nav-link-img:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .nav-link-ltr::before {
+            width: 0%;
+            bottom: 10px;
+        }
+
+        .nav-link-ltr:hover::before {
+            width: 100%;
+        }
+        #dropdown-products {
+            display: none;
+        }
+
+        #menu-products:hover #dropdown-products {
+            display: block;
+        }
+        .carousel{
+            width: 60vw;
+        }
+
+        .dropdown-item.active {
+            font-weight: bold!important;
+        }
+
+        .visimisi {
+            width: 100%;
+            height: 180px;
+        }
+
+        .vm {
+            padding-bottom: 10px;
+        }
+
+        .motto {
+            padding-top: 50px;
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="#"><img  src="assets/logo.png" style="height: 64px; height: 64px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-ltr" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown" id="menu-products">
+                        <a class="nav-link nav-link-ltr dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                          Services
+                        </a>
+                        <ul class="dropdown-menu" id="dropdown-products" style="background-color: rgba(255, 255, 255, 0.9);">
+                          <li><a class="dropdown-item" href="konseling.html">Konseling</a></li>
+                          <li><a class="dropdown-item" href="#">Psikotes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown" id="menu-products">
+                        <a class="nav-link active nav-link-ltr dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                          About Us
+                        </a>
+                        <ul class="dropdown-menu" id="dropdown-products" style="background-color: rgba(255, 255, 255, 0.9);">
+                          <li><a class="dropdown-item fw-bold" href="visimisi.html">Visi Misi</a></li>
+                          <li><a class="dropdown-item" href="#">Mengapa Pilih Kami</a></li>
+                          <li><a class="dropdown-item" href="#">Team Profile</a></li>
+                          <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-ltr" href="artikel.html">Article</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-ltr" href="#">Activity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link-img nav-link-ltr" href="#"><img  src="assets/user.png" style="height: 28px; height: 28px;"></a>
+                    </li>
+                </ul>		  
+            </div>
+        </div>
+    </nav>
+    
+    <div class="pengantar p-5">
+        <h2>Pengantar</h2>
+        <p>Konsultasikan permasalahan pribadimu secara online di tengah masa karantina di rumah. Griya Pulih Asih melayani konsultasi online melalui media aplikasi Whatsapp maupun telepon dengan biaya sebagai berikut: <br>
+            Whatsapp Call: Rp. 200.000/jam <br>
+            Whatsapp Chat: Rp. 200.000/jam <br>
+            Telepon (Non-Whatsapp): Rp. 150.000/jam <br>
+            Panggilan dilakukan oleh klien. <br>
+            Informasi dan pendaftaran dapat menghubungi Adinda: 085791152570 (WA saja).</p>
+        
+        <h2>Kecemasan: Apa Itu?</h2>
+        <p>Hidup manusia dibagi ke dalam tiga dimensi waktu: masa lalu, masa kini dan masa depan. Masa lalu sudah berlalu dan masa depan belum tiba, kehidupan manusia yang sesungguhnya adalah pada masa kini.
+
+            Kesehatan mental adalah kebiasaan berpikir dan mengalami pada masa kini. Jika pikiran dan pengalaman terlalu berkaitan dengan suatu peristiwa yang telah berlalu atau peristiwa di masa depan yang belum tiba, maka gangguan kesehatan mental akan muncul. Gangguan kesehatan mental berawal dari gangguan emosi, kemudian berpengaruh terhadap perilaku, tubuh/kesehatan fisik dan pikiran.
+            
+            Gangguan kesehatan mental dapat berkaitan dengan masa lalu, masa kini maupun masa depan. Gangguan kesehatan mental yang berkaitan dengan masa lalu adalah trauma atau kepahitan hati, gangguan kesehatan mental yang berkaitan dengan masa kini adalah stress atau depresi dan gangguan kesehatan mental yang berkaitan dengan masa depan disebut dengan kecemasan.
+            
+            Misalnya: saat kita sedang berhadapan dengan anjing yang menggonggong. Peristiwa yang sedang terjadi pada masa kini adalah berhadapan dengan anjing yang menggonggong. Namun pada umumnya pikiran kita dengan cepat langsung “menyabotase“ sehingga pikiran kita langsung memikirkan bahwa anjing ini pasti akan menggigit kita sebentar lagi.
+            
+            Kesimpulan bahwa anjing tersebut pasti menggigit didapatkan dari kesimpulan anjing yang sedang menggonggong. Padahal anjing yang menggonggong belum tentu menggigit, bisa jadi anjing tersebut hanya berani menggonggong tapi takut untuk menggigit.
+            
+            Kesimpulan dari “sabotase“ pikiran tersebut yang membuat kita langsung menjadi cemas ketika menghadapi anjing padahal kesimpulan kita belum terjadi dan masih merupakan kemungkinan di depan (baca: masa depan).
+            
+            Pada umumnya kesimpulan kita tentang masa depan dipengaruhi oleh pengalaman masa lalu. Peristiwa masa lalu langsung melompat ke masa depan dan dijadikan sebagai suatu kepastian. Dengan menggunakan contoh di atas, maka kita bisa menganalisa tentang gangguan kecemasan, yaitu faktor-faktor yang bisa membuat seseorang mengalami kecemasan.
+            
+            Timbulnya kecemasan ini sangat berkaitan dengan fokus seseorang. Seseorang yang terlalu berfokus kepada peristiwa di masa depan yang belum terjadi akan menimbulkan kecemasan.
+            
+            Peristiwa di masa depan yang belum tentu terjadi seringkali menyerap energi pikiran kita secara berlebihan. Hal ini terjadi karena pikiran menguatirkan sesuatu yang belum pasti terjadi. Kekuatiran akan masa depan yang belum pasti terjadi ini menguras daya pikir hingga hampir seratus persen dan tidak menyediakan ruang berpikir tentang masa kini. Prosentase pikiran yang banyak terserap kepada masa depan itulah yang disebut dengan fokus.
+            
+            Hal ini dapat diatasi dengan membagi fokus pikiran secara seimbang baik masa depan maupun masa kini. Akan lebih baik lagi jika fokus pikiran prosentasenya lebih banyak di masa kini. Pikiran di masa kini tersebut adalah dengan melakukan antisipasi atau alternatif pemecahan masalah sehingga sebisa mungkin memperkecil akibat negatif di masa mendatang. Dengan memperkecil akibat yang mungkin bisa terjadi di masa depan akan mengurangi tingkat kecemasan seseorang.
+            
+            Demikianlah penjelasan mengenai faktor kecemasan dan cara penanganannya. Namun masih ada beberapa penjelasan yang lain mengenai terjadinya kecemasan dan cara penanganannya yang akan dipaparkan pada edisi berikutnya.</p>
+    
+
+        <h2>Spinfinity Stainless Steel Wind Spinners</h2>
+        <p>The sky is the limit when it comes to how much money you can earn. Pala Casino is licensed by the New Jersey Department of Gaming Enforcement. 
+            Stars Group includes the existence of additional user-created accounts, Stars Group will close additional accounts without notice and will be able 
+            to enter the funds held into those additional accounts. All payment services, with the exception of cryptocurrencies, are regulated by the Financial Conduct Authority. 
+            Until the final approval of the authorities by the states, companies expect the introduction of Stardust casinos in April. 
+            The short layers mean they can make a good show and can’t make mistakes. <br>
+
+            - All they must do it speak to a customer support agent and they will review their eligibility. <br>
+            - “6.5”” Wind Spinner Diameter 7.5″” Mini Crystal Twister Length 14″” Total Length” 100% stainless steel High quality powder coated Laser… <br>
+            - It’s powered by RTG and has a generous $9,750 welcome offer. <br>
+            - Wheel bearing selections are exclusive to double sealed precision ball bearings which like the swivel raceway are maintenance-free. <br>
+            - Drawn to the colorful light reflections, they got to work to develop, innovate, and shape products that bring color and dimensions to homes and gardens everywhere. <br>
+            - Responsible gaming has a page dedicated to preventing gambling addiction. <br>
+            Please check back soon as we continue to add new and exciting products to our inventory. 
+            Real Time Gaming is the software developer that provides the games for Spinfinity. 
+            These are a well-known company within the gaming industry. They have a reputation for providing high-quality, entertaining games. 
+            Players can also be assured that the titles are completely fair as they are checked every month by Technical Systems Testing.</p>
+        
+        <h2>MASI BANYAK....</h2>
+    
+    </div>
+
+    
+</body>
+</html>
